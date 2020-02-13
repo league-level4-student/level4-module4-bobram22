@@ -30,7 +30,5 @@ public abstract class Polymorph {
 	public void sety( int y) {
 		this.x=y;
 	}
-	public void movingMorph() {
-		
-	}
+
 }
