@@ -24,10 +24,10 @@ public abstract class Polymorph {
 		this.x=x;
 	}
 	
-	public int gety() {
+	public int getY() {
 		return this.y;
 	}
-	public void sety( int y) {
+	public void setY( int y) {
 		this.x=y;
 	}
 
