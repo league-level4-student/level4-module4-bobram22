@@ -30,7 +30,7 @@ public class HospitalTest extends TestCase {
 		testHospital.addPatient(new Patient());
 		testHospital.addPatient(new Patient());
 		testHospital.addPatient(new Patient());
-		assertEquals(3, testHospital.getPatients().size());
+		assertEquals(3, testHospital.getPatient().size());
 	}
 
 	/* Fix asserts one at a time */
@@ -51,11 +51,11 @@ public class HospitalTest extends TestCase {
 	public void testAssignDoctor() throws Exception {
 		Doctor testDoctor = new GeneralPractitioner();
 		testDoctor.assignPatient(new Patient());
-		assertEquals(1, testDoctor.getPatients().size());
+		assertEquals(1, testDoctor.getPatient().size());
 		testDoctor.assignPatient(new Patient());
-		assertEquals(2, testDoctor.getPatients().size());
+		assertEquals(2, testDoctor.getPatient().size());
 		testDoctor.assignPatient(new Patient());
-		assertEquals(3, testDoctor.getPatients().size());
+		assertEquals(3, testDoctor.getPatient().size());
 	}
 
 	/* When you check a patient's pulse, they feel cared for */
@@ -92,7 +92,7 @@ public class HospitalTest extends TestCase {
 		} catch (DoctorFullException dfe) {
 			assertTrue(true);
 		}
-assertTrue(testDoctor.getPatients().size() == 3);
+assertTrue(testDoctor.getPatient().size() == 3);
 	}
 
 	public void test8Patients() throws Exception {
@@ -104,9 +104,9 @@ assertTrue(testDoctor.getPatients().size() == 3);
 		testHospital.assignPatientsToDoctors();
 		// hospital.getDoctors shows doctors have 3, 3, 2 patients
 		List<Doctor> testDoctors = testHospital.getDoctors();
-		assertEquals(3, testDoctors.get(0).getPatients().size());
-		assertEquals(3, testDoctors.get(1).getPatients().size());
-		assertEquals(2, testDoctors.get(2).getPatients().size());
+		assertEquals(3, testDoctors.get(0).getPatient().size());
+		assertEquals(3, testDoctors.get(1).getPatient().size());
+		assertEquals(2, testDoctors.get(2).getPatient().size());
 	}
 
 
