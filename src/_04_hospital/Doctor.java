@@ -1,15 +1,26 @@
 package _04_hospital;
 
-public class Doctor {
+import java.util.ArrayList;
 
+public class Doctor {
+ArrayList <Patient> p = new ArrayList <Patient>();
 	public boolean performsSurgery() {
 		// TODO Auto-generated method stub
-		if() {
-			
-		}
-		else {
+		
 			return false;
-		}
+		
 	}
-
+	public boolean makesHouseCalls() {
+		return false;
+		
+	}
+	public void assignPatient(Patient patient) {
+		// TODO Auto-generated method stub
+		p.add(patient);
+	}
+	public ArrayList<Patient> getPatient() {
+		// TODO Auto-generated method stub
+		return p;
+	}
+	
 }
